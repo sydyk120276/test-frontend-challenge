@@ -8,7 +8,7 @@ import { Provider } from 'react-redux'
 
 import store from '../redux'
 import Startup from './startup'
-import Main from '../components/main'
+import Main from '../components/Main/main'
 
 const Root = () => {
   return (

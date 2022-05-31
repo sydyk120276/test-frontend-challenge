@@ -1,0 +1,27 @@
+
+.cards {
+display: flex;
+flex-direction: column;
+justify-content: center;
+  &__block {
+  display: grid;
+  width: 1316px;
+  height: 771px;
+  margin-top: 112px;
+  margin-bottom: 48px;
+  gap: 48px;
+   grid-template-columns: auto auto auto auto auto;
+  background-color: rgb(167, 36, 86);
+  }
+  &__text {
+    width: 1316px;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 48px;
+    background-color: yellow;
+  }
+  .active {
+    opacity: 0;
+  }
+}

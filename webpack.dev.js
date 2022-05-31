@@ -13,7 +13,7 @@ const config = {
   },
   devServer: {
     hot: true,
-    // open: true,
+    open: true,
     port: 8081,
     host: 'localhost',
     // static: {
