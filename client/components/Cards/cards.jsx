@@ -5,21 +5,23 @@ import './cards.scss'
 
 const Cards = () => {
   const [state, setState] = useState([])
+  const [visibled, setVisibled] = useState(true)
   const [currentPage, setCurrentPage] = useState(1)
   const [tetching, setFetching] = useState(true)
 
   const text = document.getElementsByClassName('cards__text')
   console.log('text', text)
 
-  const scrollText = () => {
-    text.addEventListener('scroll', text.classList('active'))
-  }
-
   const scrollHandler = (e) => {
     if (
-      e.target.documentElement.scrollHeight - (e.target.documentElement.scrollTop + window.innerHeight) < 100
+      // eslint-disable-next-line
+      e.target.documentElement.scrollHeight -
+        // eslint-disable-next-line
+        (e.target.documentElement.scrollTop + window.innerHeight) <
+      100
     ) {
       setFetching(true)
+      setVisibled(false)
     }
   }
 
@@ -42,7 +44,10 @@ const Cards = () => {
     }
   }, [])
   console.log(state.length)
+
+  // 15 карточка без картинки
   const cats = state.filter((item) => item.image)
+
   console.log(cats.length)
 
   return (
@@ -56,9 +61,7 @@ const Cards = () => {
           )
         })}
       </div>
-      <div onScroll={() => scrollText()} className="cards__text">
-        ... загружаем еще котиков ...
-      </div>
+      {visibled && <div className="cards__text">... загружаем еще котиков ...</div>}
     </div>
   )
 }

@@ -11,7 +11,7 @@ justify-content: center;
   margin-bottom: 48px;
   gap: 48px;
    grid-template-columns: auto auto auto auto auto;
-  background-color: rgb(167, 36, 86);
+   background-color: red;
   }
   &__text {
     width: 1316px;
@@ -19,7 +19,6 @@ justify-content: center;
     display: flex;
     justify-content: center;
     margin-bottom: 48px;
-    background-color: yellow;
   }
   .active {
     opacity: 0;
