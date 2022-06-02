@@ -1,23 +1,25 @@
 import React, { useState, useEffect } from 'react'
+import { useDispatch } from 'react-redux'
 
 import Card from '../Card/card'
 import './cards.scss'
+import { getLists } from '../../redux/reducers/cards'
 
 const Cards = () => {
+  const dispatch = useDispatch()
   const [state, setState] = useState([])
   const [visibled, setVisibled] = useState(true)
   const [currentPage, setCurrentPage] = useState(1)
   const [tetching, setFetching] = useState(true)
 
-  const text = document.getElementsByClassName('cards__text')
-  console.log('text', text)
+  console.log('text', state)
 
   const scrollHandler = (e) => {
     if (
       // eslint-disable-next-line
       e.target.documentElement.scrollHeight -
-        // eslint-disable-next-line
-        (e.target.documentElement.scrollTop + window.innerHeight) <
+      // eslint-disable-next-line
+      (e.target.documentElement.scrollTop + window.innerHeight) <
       100
     ) {
       setFetching(true)
@@ -26,8 +28,12 @@ const Cards = () => {
   }
 
   useEffect(() => {
+    dispatch(getLists())
+  }, [])
+
+  useEffect(() => {
     if (tetching) {
-      fetch(`https://api.thecatapi.com/v1/breeds?limit=15&page=${currentPage}&order=desc`)
+      fetch(`https://api.thecatapi.com/v1/breeds?limit=17&page=${currentPage}&order=desc`)
         .then((res) => res.json())
         .then((data) => {
           setState([...state, ...data])
@@ -45,8 +51,8 @@ const Cards = () => {
   }, [])
   console.log(state.length)
 
-  // 15 карточка без картинки
-  const cats = state.filter((item) => item.image)
+  // карточки без поля и пустого поля image
+  const cats = state.filter((item) => item.image && item.image.id)
 
   console.log(cats.length)
 

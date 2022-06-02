@@ -28,32 +28,62 @@
   "rules": {
     "react/no-unstable-nested-components": [
       "warn",
-      { "allowAsProps": true }
+      {
+        "allowAsProps": true
+      }
     ],
-    "react/function-component-definition": [2, {
-      "namedComponents": "arrow-function",
-      "unnamedComponents": "arrow-function"
-    }],
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
     "space-before-function-paren": "off",
     "react/prefer-stateless-function": "warn",
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    "jsx-a11y/anchor-is-valid": "off",
-    "jsx-a11y/label-has-for": [ 2, {
-      "required": {
-        "every": [ "id" ]
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
       }
-    }],
-    "jsx-a11y/label-has-associated-control": [ 2, {
-      "labelComponents": ["CustomInputLabel"],
-      "labelAttributes": ["label"],
-      "controlComponents": ["CustomInput"],
-      "depth": 3
-    }],
-      "max-len": ["warn", {
-      "ignoreComments": true,
-      "ignoreStrings": true,
-      "code": 240
-    }],
+    ],
+    "jsx-a11y/anchor-is-valid": "off",
+    "jsx-a11y/label-has-for": [
+      2,
+      {
+        "required": {
+          "every": [
+            "id"
+          ]
+        }
+      }
+    ],
+    "jsx-a11y/label-has-associated-control": [
+      2,
+      {
+        "labelComponents": [
+          "CustomInputLabel"
+        ],
+        "labelAttributes": [
+          "label"
+        ],
+        "controlComponents": [
+          "CustomInput"
+        ],
+        "depth": 3
+      }
+    ],
+    "max-len": [
+      "warn",
+      {
+        "ignoreComments": true,
+        "ignoreStrings": true,
+        "code": 240
+      }
+    ],
     "react/jsx-uses-react": 1,
     "react/sort-comp": "off",
     "import/no-cycle": "off",
@@ -65,7 +95,16 @@
     "comma-dangle": "off",
     "class-methods-use-this": "off",
     "quote-props": "off",
-    "no-underscore-dangle": ["error", { "allow": ["__REDUX_DEVTOOLS_EXTENSION__", "_id", "_doc"] }],
+    "no-underscore-dangle": [
+      "error",
+      {
+        "allow": [
+          "__REDUX_DEVTOOLS_EXTENSION__",
+          "_id",
+          "_doc"
+        ]
+      }
+    ],
     "react/destructuring-assignment": "off",
     "react/jsx-wrap-multilines": "off",
     "react/jsx-one-expression-per-line": "off",
@@ -75,7 +114,10 @@
     "jsx-a11y/control-has-associated-label": "warn",
     "jsx-a11y/no-autofocus": "warn",
     "max-classes-per-file": "warn",
-    "react/jsx-props-no-spreading": ["off"],
-    "camelcase": "off"
+    "react/jsx-props-no-spreading": [
+      "off"
+    ],
+    "camelcase": "off",
+    "default-param-last": "off"
   }
 }

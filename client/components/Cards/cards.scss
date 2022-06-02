@@ -15,12 +15,8 @@ justify-content: center;
   }
   &__text {
     width: 1316px;
-    opacity: 1;
     display: flex;
     justify-content: center;
     margin-bottom: 48px;
-  }
-  .active {
-    opacity: 0;
   }
 }

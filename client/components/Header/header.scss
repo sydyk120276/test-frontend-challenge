@@ -20,19 +20,32 @@
 
   &__btn {
     display: flex;
-    width: 120px;
+    // width: 120px;
+    padding: 0 20px;
     align-items: center;
     justify-content: center;
     height: 100%;
-    background: #1E88E5;
+    background: #2196F3;
+    cursor: pointer;
 
   }
   &__btn-long {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 173px;
+    // width: 173px;
+    padding: 0 20px;
     height: 64px;
     background: #2196F3;
+    cursor: pointer;
+  }
+  .active {
+    display: flex;
+    padding: 0 20px;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    cursor: pointer;
+    background: #1E88E5;
   }
 }

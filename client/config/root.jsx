@@ -9,6 +9,7 @@ import { Provider } from 'react-redux'
 import store from '../redux'
 import Startup from './startup'
 import Main from '../components/Main/main'
+import Basket from '../components/Basket/basket'
 
 const Root = () => {
   return (
@@ -17,6 +18,7 @@ const Root = () => {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Main />} />
+            <Route path="/basket" element={<Basket />} />
           </Routes>
         </BrowserRouter>
       </Startup>
