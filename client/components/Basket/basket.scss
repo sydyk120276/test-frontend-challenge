@@ -7,54 +7,64 @@
   margin: 0 auto;
   padding: 0;
   gap: 48px;
-  background-color: aqua;
+       @media screen and (max-width: 1400px) {
+     width: 1050px ;
+   }
+     @media screen and (max-width: 1200px) {
+     width: 880px ;
+   }
+     @media screen and (max-width: 1024px) {
+     width: 750px ;
+   }
+     @media screen and (max-width: 880px) {
+     width: 510px ;
+   }
+     @media screen and (max-width: 768px) {
+     width: 480px ;
+   }
+       @media screen and (max-width: 600px) {
+     width: 230px ;
+   }
+       @media screen and (max-width: 280px) {
+     width: 225px ;
+   }
   &__block {
     display: flex;
     flex-wrap: wrap;
-    width: 1316px;
-    height: 771px;
-    margin-top: 112px;
+    width: 1318px;
+    margin-top: 114px;
     margin-bottom: 48px;
     gap: 48px;
-    //  grid-template-columns: auto auto auto auto auto;
-     background-color: red;
+         @media screen and (max-width: 1400px) {
+     width: 1070px ;
+     margin: 112px auto;
+   }
+     @media screen and (max-width: 1200px) {
+     width: 800px ;
+     margin: 112px auto;
+   }
+     @media screen and (max-width: 1024px) {
+     width: 520px ;
+     margin: 112px auto;
+   }
+     @media screen and (max-width: 880px) {
+     width: 550px ;
+     margin: 112px auto;
+   }
+     @media screen and (max-width: 768px) {
+     width: 480px ;
+     margin: 112px auto;
+      gap: 20px;
+   }
+     @media screen and (max-width: 600px) {
+     width: 230px ;
+     margin: 112px auto;
+      gap: 20px;
+   }
+     &-card {
+        width: 225px;
+        height: 225px;
+     }
   }
 }
 
-
-// .cat {
-//   display: flex;
-// flex-direction: column;
-// justify-content: center;
-//   transform: scale(1);
-  
-//   &__block {
-//     position: relative;
-//     width: 225px;
-//     height: 225px;
-//     button {
-//       position: absolute;
-//       width: 257px;
-//       height: 94px;
-//       bottom: 0;
-//       svg {
-//         position: absolute;
-//         top: 33px;
-//         left: 170px;
-//       }
-//     }
-  
-//   img {
-//     width: 225px;
-//     height: 225px;
-//   }
-  
-//   }
-//   &:hover {
-//     transform: scale(1.2);
-//     transition-duration: .7s;
-//     background: #FFFFFF;
-//   box-shadow: 0px 6px 5px rgba(0, 0, 0, 0.24), 0px 9px 18px rgba(0, 0, 0, 0.18);
-//   }
-//   }
-  

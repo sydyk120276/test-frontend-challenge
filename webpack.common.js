@@ -14,7 +14,7 @@ const { SOCKETS_ENABLE } = process.env
 const config = {
   entry: './client/main.jsx',
   resolve: {
-    extensions: ['.js', '.jsx', '.json'],
+    extensions: ['.js', '.jsx', '.json']
   },
   output: {
     filename: 'assets/js/[name].bundle.js',
@@ -49,6 +49,17 @@ const config = {
           'sass-loader'
         ]
       },
+      {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'images/[name].[ext]'
+            }
+          }
+        ]
+      }
     ]
   },
   plugins: [
@@ -87,7 +98,7 @@ const config = {
             dot: true,
             ignore: ['**/.gitkeep']
           }
-        },
+        }
       ]
     }),
     new CleanWebpackPlugin(),

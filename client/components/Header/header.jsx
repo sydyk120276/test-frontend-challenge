@@ -2,31 +2,27 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 // import classNames from 'classnames'
 
-import { history } from '../../redux'
+// import { history } from '../../redux'
 import './header.scss'
 
 const Header = () => {
-  const [toggle, setToggle] = useState(false)
+  const [toggle, setToggle] = useState(true)
   console.log(toggle)
 
   const onclick = () => {
     setToggle(!toggle)
-    history.push('/')
   }
-  const onclickToBasket = () => {
-    setToggle(!toggle)
-    history.push('/basket')
-  }
+  // const onclickToBasket = () => {
+  //   setToggle(!toggle)
+  // }
+
   return (
     <div className="header">
       <div className="block">
-        {/* {['Все котики', 'Любимые котики'].map((item, index) => {
-          return <button type="button" key={index}>{item}</button>
-        })} */}
-        <Link to="/" onClick={onclick} className={!toggle ? 'active' : 'block__btn'}>
+        <Link to="/" onClick={onclick} className={toggle ? 'active' : 'block__btn'}>
           Все котики
         </Link>
-        <Link to="/basket" onClick={onclickToBasket} className={!toggle ? 'block__btn-long' : 'active'}>
+        <Link to="/basket" onClick={onclick} className={!toggle ? 'active' : 'block__btn-long'}>
           Любимые котики
         </Link>
       </div>
